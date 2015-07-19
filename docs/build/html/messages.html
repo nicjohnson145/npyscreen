@@ -8,7 +8,7 @@
     
     <title>Displaying Brief Messages and Choices &mdash; npyscreen 2 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,8 @@
     <link rel="next" title="Application Support" href="options.html" />
     <link rel="prev" title="Support for Colour" href="color.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,52 +40,52 @@
         <li class="right" >
           <a href="color.html" title="Support for Colour"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="displaying-brief-messages-and-choices">
 <h1>Displaying Brief Messages and Choices<a class="headerlink" href="#displaying-brief-messages-and-choices" title="Permalink to this headline">¶</a></h1>
 <p>The following functions allow you to display a brief message or choice to the user.</p>
 <dl class="function">
 <dt id="notify">
-<tt class="descname">notify</tt><big>(</big><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>wide=False</em><big>)</big><a class="headerlink" href="#notify" title="Permalink to this definition">¶</a></dt>
+<code class="descname">notify</code><span class="sig-paren">(</span><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>wide=False</em><span class="sig-paren">)</span><a class="headerlink" href="#notify" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function displays a message on the screen.  It does not block and the user cannot interact with it - use it to display messages like &#8220;Please Wait&#8221; while other things are happening.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="notify_wait">
-<tt class="descname">notify_wait</tt><big>(</big><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>wide=False</em><big>)</big><a class="headerlink" href="#notify_wait" title="Permalink to this definition">¶</a></dt>
+<code class="descname">notify_wait</code><span class="sig-paren">(</span><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>wide=False</em><span class="sig-paren">)</span><a class="headerlink" href="#notify_wait" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function displays a message on the screen, and blocks for a brief amount of time. The user cannot interact with it.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="notify_confirm">
-<tt class="descname">notify_confirm</tt><big>(</big><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>wide=False</em>, <em>editw=0</em><big>)</big><a class="headerlink" href="#notify_confirm" title="Permalink to this definition">¶</a></dt>
+<code class="descname">notify_confirm</code><span class="sig-paren">(</span><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>wide=False</em>, <em>editw=0</em><span class="sig-paren">)</span><a class="headerlink" href="#notify_confirm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display a message and an OK button.  The user can scroll the message if needed.  editw controls which widget is selected when the dialog is first displayed; set to 1 to have the OK button active immediately.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="notify_ok_cancel">
-<tt class="descname">notify_ok_cancel</tt><big>(</big><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>editw = 0</em><big>)</big><a class="headerlink" href="#notify_ok_cancel" title="Permalink to this definition">¶</a></dt>
+<code class="descname">notify_ok_cancel</code><span class="sig-paren">(</span><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>editw = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#notify_ok_cancel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display a message and return True if the user selected &#8216;OK&#8217; and False if the user selected &#8216;Cancel&#8217;.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="notify_yes_no">
-<tt class="descname">notify_yes_no</tt><big>(</big><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>editw = 0</em><big>)</big><a class="headerlink" href="#notify_yes_no" title="Permalink to this definition">¶</a></dt>
+<code class="descname">notify_yes_no</code><span class="sig-paren">(</span><em>message</em>, <em>title=&quot;Message&quot;</em>, <em>form_color='STANDOUT'</em>, <em>wrap=True</em>, <em>editw = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#notify_yes_no" title="Permalink to this definition">¶</a></dt>
 <dd><p>Similar to <em>notify_ok_cancel</em> except the names of the buttons are &#8216;Yes&#8217; and &#8216;No&#8217;.  Returns True or False.</p>
 </dd></dl>
 
 <p>The following function will display a dialog box for the user to select a filename.</p>
 <dl class="function">
 <dt id="selectFile">
-<tt class="descname">selectFile</tt><big>(</big><em>select_dir=False</em>, <em>must_exist=False</em>, <em>confirm_if_exists=True</em>, <em>sort_by_extension=True</em><big>)</big><a class="headerlink" href="#selectFile" title="Permalink to this definition">¶</a></dt>
+<code class="descname">selectFile</code><span class="sig-paren">(</span><em>select_dir=False</em>, <em>must_exist=False</em>, <em>confirm_if_exists=True</em>, <em>sort_by_extension=True</em><span class="sig-paren">)</span><a class="headerlink" href="#selectFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>This form is currently experimental.  The return value is the name of the file.</p>
 </dd></dl>
 
@@ -94,7 +94,7 @@
 <h1>Blanking the Screen<a class="headerlink" href="#blanking-the-screen" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="blank_terminal">
-<tt class="descname">blank_terminal</tt><big>(</big><big>)</big><a class="headerlink" href="#blank_terminal" title="Permalink to this definition">¶</a></dt>
+<code class="descname">blank_terminal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blank_terminal" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function blanks the terminal.  It may sometimes be needed if Forms are being displayed that do not fill the whole screen.</p>
 </dd></dl>
 
@@ -104,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -118,12 +118,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="options.html"
                         title="next chapter">Application Support</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/messages.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/messages.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -140,7 +142,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -152,12 +154,12 @@
         <li class="right" >
           <a href="color.html" title="Support for Colour"
              >previous</a> |</li>
-        <li><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Nicholas Cole.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

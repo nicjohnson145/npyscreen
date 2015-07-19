@@ -72,6 +72,9 @@ All widgets have the following methods:
     npyscreen will try to position it relative to the bottom or right edge of the 
     Form.  Note that this ignores any margins that the Form may have defined. 
     (New in Version 4.3.0).
+	
+*safe_to_exit()*
+	This method is called by the default handlers before a user tries to exit from a widget.  It should return True if this should be allowed and False if it should not.  You may override this method to perform any verification of the contents of a field before allowing the user to exit.  (New in Version 4.10.0)
     
 
 Titled Widgets

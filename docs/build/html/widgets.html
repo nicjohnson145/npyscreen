@@ -8,7 +8,7 @@
     
     <title>Widgets: Basic Features &mdash; npyscreen 2 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,8 @@
     <link rel="next" title="Widgets: Displaying Text" href="widgets-text.html" />
     <link rel="prev" title="Form Objects" href="form-objects.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,14 +40,14 @@
         <li class="right" >
           <a href="form-objects.html" title="Form Objects"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="widgets-basic-features">
 <h1>Widgets: Basic Features<a class="headerlink" href="#widgets-basic-features" title="Permalink to this headline">¶</a></h1>
@@ -107,6 +107,8 @@ the check for this by setting the attribute <em>check_cursor_move</em> to False.
 npyscreen will try to position it relative to the bottom or right edge of the
 Form.  Note that this ignores any margins that the Form may have defined.
 (New in Version 4.3.0).</dd>
+<dt><em>safe_to_exit()</em></dt>
+<dd>This method is called by the default handlers before a user tries to exit from a widget.  It should return True if this should be allowed and False if it should not.  You may override this method to perform any verification of the contents of a field before allowing the user to exit.  (New in Version 4.10.0)</dd>
 </dl>
 </div>
 <div class="section" id="titled-widgets">
@@ -145,7 +147,7 @@ Form.  Note that this ignores any margins that the Form may have defined.
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -165,12 +167,14 @@ Form.  Note that this ignores any margins that the Form may have defined.
   <h4>Next topic</h4>
   <p class="topless"><a href="widgets-text.html"
                         title="next chapter">Widgets: Displaying Text</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/widgets.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/widgets.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -187,7 +191,7 @@ Form.  Note that this ignores any margins that the Form may have defined.
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -199,12 +203,12 @@ Form.  Note that this ignores any margins that the Form may have defined.
         <li class="right" >
           <a href="form-objects.html" title="Form Objects"
              >previous</a> |</li>
-        <li><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Nicholas Cole.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

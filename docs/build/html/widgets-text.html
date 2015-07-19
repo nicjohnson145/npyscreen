@@ -8,7 +8,7 @@
     
     <title>Widgets: Displaying Text &mdash; npyscreen 2 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,8 @@
     <link rel="next" title="Widgets: Picking Options" href="widgets-multiline.html" />
     <link rel="prev" title="Widgets: Basic Features" href="widgets.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,20 +40,20 @@
         <li class="right" >
           <a href="widgets.html" title="Widgets: Basic Features"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="widgets-displaying-text">
 <h1>Widgets: Displaying Text<a class="headerlink" href="#widgets-displaying-text" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
-<dt>Textbox, TitleText</dt>
-<dd>A single line of text, although of arbitrary length - the basic entry widget.</dd>
+<dt>Textfild, TitleText</dt>
+<dd>A single line of text, although of arbitrary length - the basic entry widget.  N.B. some versions of the documentation incorrection refer to a &#8216;textbox&#8217; widget.</dd>
 <dt>FixedText, TitleFixedText</dt>
 <dd>A single line of text, but with the editing functions of Textbox removed.</dd>
 <dt>PasswordEntry, TitlePassword</dt>
@@ -77,16 +77,16 @@
 <h2>In detail<a class="headerlink" href="#in-detail" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="Textbox">
-<em class="property">class </em><tt class="descname">Textbox</tt><a class="headerlink" href="#Textbox" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Textbox</code><a class="headerlink" href="#Textbox" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="Textbox.display_value">
-<tt class="descname">display_value</tt><big>(</big><em>vl</em><big>)</big><a class="headerlink" href="#Textbox.display_value" title="Permalink to this definition">¶</a></dt>
+<code class="descname">display_value</code><span class="sig-paren">(</span><em>vl</em><span class="sig-paren">)</span><a class="headerlink" href="#Textbox.display_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Control how the value of the <cite>.value</cite> attribute is displayed.  Since versions of the text widgets are used in other, compound widgets (such as most of the multiline classes), this method is often overridden.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Textbox.show_brief_message">
-<tt class="descname">show_brief_message</tt><big>(</big><big>)</big><a class="headerlink" href="#Textbox.show_brief_message" title="Permalink to this definition">¶</a></dt>
+<code class="descname">show_brief_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Textbox.show_brief_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Beep and display a brief message to the user.  In general, there are better ways to do this, but this is somtimes useful, for example when showing errors in Autocomplete classes.</p>
 </dd></dl>
 
@@ -99,7 +99,7 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -115,12 +115,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="widgets-multiline.html"
                         title="next chapter">Widgets: Picking Options</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/widgets-text.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/widgets-text.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -137,7 +139,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -149,12 +151,12 @@
         <li class="right" >
           <a href="widgets.html" title="Widgets: Basic Features"
              >previous</a> |</li>
-        <li><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">npyscreen 2 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Nicholas Cole.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>
