@@ -31,7 +31,7 @@ If a key is pressed (note support for notations like "^N" for "Control-N" and "!
     
     Complex handlers are used, for example, to ensure that only printable characters are entered into a textbox.  Since they will be run frequently, there should be as few of them as possible, and they should execute as quickly as possible.
     
-When a user is editing a widget and a key is pressed, *handlers* and then *complex_handlers* are used to try to find a function to execute.  If the widget doesn't define an action to be taken, the *handlers* and *complex_handlers* of the parent Form are then checked.
+When a user is editing a widget and a key is pressed, *handlers* and then *complex_handlers* are used to try to find a function to execute. If the widget doesn't define an action to be taken, the *handlers* and *complex_handlers* of the parent Form are then checked. Consequently, if you want to override the handler for a key that is already bound, like the Enter key, keep in mind that you do so on Widgets and not on the Form they're part of, as the Widget's handlers take precedence.
 
 Adding your own handlers
 ************************
