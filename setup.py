@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
 	name="npyscreen",
-	version="4.10.5",
+	version="4.11",
 	description="Writing user interfaces without all that ugly mucking about in hyperspace",
 	author="Nicholas Cole",
 	author_email="n@npcole.com",
@@ -38,6 +38,8 @@ There is a mailing list available at https://groups.google.com/forum/?fromgroups
 
 
 *Latest Changes*:
+
+Version 4.11: Sliders can return ints as well as floats.
 
 Version 4.10.5:  Merged in bug-fixes and enhancements suggested by Nathan Lewis. 
 

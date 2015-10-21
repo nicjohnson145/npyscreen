@@ -112,7 +112,9 @@ class Slider(widget.Widget):
         if self.__value > self.out_of: raise ValueError
 
     def get_value(self):
-        return float(self.__value)
+        #return float(self.__value)
+        return self.__value
+        
     value = property(get_value, set_value)
 
     def set_up_handlers(self):
