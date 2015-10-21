@@ -42,10 +42,11 @@ class CheckboxBare(_ToggleControl):
     False_box = '[ ]'
     True_box  = '[X]'
     
-    def __init__(self, screen, value = False, **keywords):
+    def __init__(self, screen, value = False, controlColor='CONTROL', **keywords):
         super(CheckboxBare, self).__init__(screen, **keywords)
         self.value = value
         self.hide  = False
+        self.controlColor = controlColor
     
     def calculate_area_needed(self):
         return 1, 4
@@ -63,7 +64,7 @@ class CheckboxBare(_ToggleControl):
             cb_display = self.__class__.False_box
         
         if self.do_colors():    
-            self.parent.curses_pad.addstr(self.rely, self.relx, cb_display, self.parent.theme_manager.findPair(self, 'CONTROL'))
+            self.parent.curses_pad.addstr(self.rely, self.relx, cb_display, self.parent.theme_manager.findPair(self, self.controlColor))
         else:
             self.parent.curses_pad.addstr(self.rely, self.relx, cb_display)
         
@@ -86,7 +87,7 @@ class Checkbox(_ToggleControl):
     False_box = '[ ]'
     True_box  = '[X]'
     
-    def __init__(self, screen, value = False, **keywords):
+    def __init__(self, screen, value = False, controlColor='CONTROL', **keywords):
         self.value = value
         super(Checkbox, self).__init__(screen, **keywords)
         
@@ -97,6 +98,7 @@ class Checkbox(_ToggleControl):
         self.highlight = False
         self.important = False
         self.hide      = False
+        self.controlColor = controlColor
         
     def _create_label_area(self, screen):
         l_a_width = self.width - 5
@@ -121,7 +123,7 @@ class Checkbox(_ToggleControl):
             cb_display = self.__class__.False_box
         
         if self.do_colors():    
-            self.parent.curses_pad.addstr(self.rely, self.relx, cb_display, self.parent.theme_manager.findPair(self, 'CONTROL'))
+            self.parent.curses_pad.addstr(self.rely, self.relx, cb_display, self.parent.theme_manager.findPair(self, self.controlColor))
         else:
             self.parent.curses_pad.addstr(self.rely, self.relx, cb_display)
 
@@ -132,6 +134,7 @@ class Checkbox(_ToggleControl):
         self._update_label_row_attributes(self.label_area, clear=clear)
     
     def _update_label_row_attributes(self, row, clear=True):
+        row.color = self.color
         if self.editing:
             row.highlight = True
         else:
