@@ -8,7 +8,7 @@ class NotifyWaitExample(npyscreen.Form):
 
         self.how_exited_handers[npyscreen.wgwidget.EXITED_ESCAPE] = self.exit_application
         self.add_handlers({key_of_choice: self.spawn_notify_popup})
-        self.display_text = self.add(npyscreen.FixedText, value=what_to_display, height=2)
+        self.add(npyscreen.FixedText, value=what_to_display)
 
     def spawn_notify_popup(self, code_of_key_pressed):
         message_to_display = 'I popped up \n passed: {}'.format(code_of_key_pressed)

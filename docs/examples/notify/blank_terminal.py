@@ -9,7 +9,7 @@ class BlankTerminalExample(npyscreen.Form):
 
         self.how_exited_handers[npyscreen.wgwidget.EXITED_ESCAPE] = self.exit_application
         self.add_handlers({key_of_choice: self.initiate_blanking_sequence})
-        self.display_text = self.add(npyscreen.FixedText, value=what_to_display, height=2)
+        self.add(npyscreen.FixedText, value=what_to_display)
 
     def initiate_blanking_sequence(self, code_of_key_pressed):
         npyscreen.blank_terminal()
