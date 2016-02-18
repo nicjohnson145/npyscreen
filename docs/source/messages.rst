@@ -3,13 +3,32 @@ Displaying Brief Messages and Choices
 
 The following functions allow you to display a brief message or choice to the user.
 
+Notify and related methods are implemented in ``npyscreen/utilNotify.py``
+
+The examples on this page build from this basic program:
+
+.. literalinclude:: ../examples/notify/notify_skeleton.py
+    :linenos:
+
 .. py:function:: notify(message, title="Message", form_color='STANDOUT', wrap=True, wide=False,)
 
     This function displays a message on the screen.  It does not block and the user cannot interact with it - use it to display messages like "Please Wait" while other things are happening.
     
+    .. literalinclude:: ../examples/notify/notify.py
+        :emphasize-lines: 2, 11, 14-17
+        :lines: 1-17
+        :linenos:
+        :caption: ../examples/notify/notify.py snippet
+
 .. py:function:: notify_wait(message, title="Message", form_color='STANDOUT', wrap=True, wide=False,)
     
-	This function displays a message on the screen, and blocks for a brief amount of time. The user cannot interact with it.
+    This function displays a message on the screen, and blocks for a brief amount of time. The user cannot interact with it.
+
+    .. literalinclude:: ../examples/notify/notify_wait.py
+        :lineno-start: 4
+        :emphasize-lines: 7, 10-12
+        :lines: 4-15
+        :caption: ../examples/notify/notify_wait.py snippet
     
 .. py:function:: notify_confirm(message, title="Message", form_color='STANDOUT', wrap=True, wide=False, editw=0)
     
