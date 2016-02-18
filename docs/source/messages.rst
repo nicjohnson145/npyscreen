@@ -29,29 +29,55 @@ The examples on this page build from this basic program:
         :emphasize-lines: 7, 10-12
         :lines: 4-15
         :caption: ../examples/notify/notify_wait.py snippet
-    
+
 .. py:function:: notify_confirm(message, title="Message", form_color='STANDOUT', wrap=True, wide=False, editw=0)
     
     Display a message and an OK button.  The user can scroll the message if needed.  editw controls which widget is selected when the dialog is first displayed; set to 1 to have the OK button active immediately.
-    
+
+    .. literalinclude:: ../examples/notify/notify_confirm.py
+        :lineno-start: 4
+        :emphasize-lines: 6, 10-12
+        :lines: 4-15
+        :caption: ../examples/notify/notify_confirm.py snippet
+
 .. py:function:: notify_ok_cancel(message, title="Message", form_color='STANDOUT', wrap=True, editw = 0,)
 
     Display a message and return True if the user selected 'OK' and False if the user selected 'Cancel'.
+
+    .. literalinclude:: ../examples/notify/notify_ok_cancel.py
+        :lineno-start: 4
+        :emphasize-lines: 6, 10-13
+        :lines: 4-16
+        :caption: ../examples/notify/notify_ok_cancel.py snippet
     
 .. py:function:: notify_yes_no(message, title="Message", form_color='STANDOUT', wrap=True, editw = 0)
 
     Similar to *notify_ok_cancel* except the names of the buttons are 'Yes' and 'No'.  Returns True or False.
     
 
-The following function will display a dialog box for the user to select a filename.
+
 
 .. py:function:: selectFile(select_dir=False, must_exist=False, confirm_if_exists=True,sort_by_extension=True,)
 
-    This form is currently experimental.  The return value is the name of the file.
-    
+    Display a dialog box for the user to select a filename. Uses the called from directory as the initial folder.  The
+    return value is the name of the file selected.
+
+    **Warning:** This form is currently experimental.
+
+    .. literalinclude:: ../examples/notify/select_file.py
+        :lineno-start: 4
+        :emphasize-lines: 6, 10-12
+        :lines: 4-15
+        :caption: ../examples/notify/select_file.py snippet
+
 Blanking the Screen
 ===================
 
 .. py:function:: blank_terminal()
 
     This function blanks the terminal.  It may sometimes be needed if Forms are being displayed that do not fill the whole screen.
+
+    .. literalinclude:: ../examples/notify/blank_terminal.py
+        :lineno-start: 1
+        :emphasize-lines: 1, 14-18
+        :caption: ../examples/notify/blank_terminal.py snippet
