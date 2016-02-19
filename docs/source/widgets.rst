@@ -31,8 +31,10 @@ Constructor arguments
    Whether a widget is visible or not.  (Initial setting of the *.hidden* attribute.)
 
 *color='DEFAULT'*, labelColor='LABEL'
-   Provides a hint to the colour-management system as to how the widget should be displayed.  More details elsewhere.
-   
+   Provides a hint to the colour-management system as to how the widget should be displayed.
+
+   For more details see  :ref:`setting up colors <color_reference>`.
+
 *scroll_exit=False*, *slow_scroll=False*, *exit_left*, *exit_right*
     These affect the way a user interacts with multi-line widgets.  *scroll_exit* decides whether or not the user can move from the first or last item to the previous or next widget.  *slow_scroll* means that widgets that scroll will do so one line at at time, not by the screen-full. The options *exit_left|right* dictate whether the user can exit a widget using the left and right arrow keys.
     

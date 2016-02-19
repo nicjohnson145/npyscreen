@@ -1,6 +1,7 @@
 Support for Colour
 ==================
 
+.. _color_reference:
 Setting up colour
 *****************
 
