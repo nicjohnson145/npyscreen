@@ -268,14 +268,21 @@ class _FormBase(proto_fm_screen_area.ScreenArea,
 
 
     def find_next_editable(self, *args):
-        if not self.cycle_widgets:
-            r = list(range(self.editw+1, len(self._widgets__)))
+        if not self.editw == len(self._widgets__):
+            if not self.cycle_widgets:
+                r = list(range(self.editw+1, len(self._widgets__)))
+            else:
+                r = list(range(self.editw+1, len(self._widgets__))) + list(range(0, self.editw))
+            for n in r:
+                if self._widgets__[n].editable and not self._widgets__[n].hidden: 
+                    self.editw = n
+                    break
         else:
-            r = list(range(self.editw+1, len(self._widgets__))) + list(range(0, self.editw))
-        for n in r:
-            if self._widgets__[n].editable and not self._widgets__[n].hidden: 
-                self.editw = n
-                break
+            # wrap from bottom to top of widget list
+            for n in range(len(self._widgets__)):
+                if self._widgets__[n].editable and not self._widgets__[n].hidden:
+                    self.editw = n
+                    break
         self.display()
 
 
@@ -285,6 +292,12 @@ class _FormBase(proto_fm_screen_area.ScreenArea,
             # so go to -1, not 0! (fence post error in reverse)
             for n in range(self.editw-1, -1, -1 ):
                 if self._widgets__[n].editable and not self._widgets__[n].hidden: 
+                    self.editw = n
+                    break
+        else:
+            # wrap from top to bottom of widget list
+            for n in reversed(range(len(self._widgets__))):
+                if self._widgets__[n].editable and not self._widgets__[n].hidden:
                     self.editw = n
                     break
 
