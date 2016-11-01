@@ -29,7 +29,7 @@ class MultiSelect(selectone.SelectOne):
         self.value = self._filtered_values_cache
     
     def h_select_exit(self, ch):
-        if not self.cursor_line in self.value:
+        if self.cursor_line > 0 and not self.cursor_line in self.value:
             self.value.append(self.cursor_line)
         if self.return_exit:
             self.editing = False
