@@ -4,7 +4,7 @@ Creating npyscreen applications
 Objects Overview
 ----------------
 
-Npyscreen applications are build out of three main types of object.
+Npyscreen applications are built out of three main types of object.
 
 Form Objects
     Form objects (typically the size of a whole terminal, but sometimes larger or - for menus and the like - smaller) provide an area which can contain widget objects.  They may provide additional functions like a system for handling menus, or routines that will be run if a user selects an "ok" button.  They may also define operations carried out between key-presses, or as the user moves around the Form.
