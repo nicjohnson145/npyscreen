@@ -95,7 +95,7 @@ New in version 4.8.2.
 
 For some applications it may be desirable to customize the attributes of the contained grid widgets depending upon their content. Grid widgets call a method called `custom_print_cell(actual_cell, display_value)` after they have set the value of a cell and before the content of the cell is drawn to the screen.  The parameter `actual_cell` is the underlying widget object being used for display, while `display_value` is the object that has been set as the content of the cell (which is the output of the `display_value` method).
 
-The following code demonstrates how to use this facility to adjust the color of the text displayed in a grid. My thanks are due to Johan LundstrÃ¶m for suggesting this feature::
+The following code demonstrates how to use this facility to adjust the color of the text displayed in a grid. My thanks are due to Johan Lundström for suggesting this feature::
 
 
 
@@ -171,7 +171,7 @@ Button
 ButtonPress
     Not a toggle, but a control.  This widget has the method *whenPressed(self)*, which you should overload to do your own things.  
     
-    From version 4.3.0 onwards, the constructor accepts an argument *when_pressed_function=None*.  If a callable is specified in this way, if will be called instead of the method *whenPressed*. NB.  The when_pressed_function functionality is potentially dangerous. It can set up a circular reference that the garbage collector will never free. If this is a risk for your program, it is best to subclass this object and override the *when_pressed_function* method instead.
+    From version 4.3.0 onwards, the constructor accepts an argument *when_pressed_function=None*.  If a callable is specified in this way, it will be called instead of the method *whenPressed*. NB.  The when_pressed_function functionality is potentially dangerous. It can set up a circular reference that the garbage collector will never free. If this is a risk for your program, it is best to subclass this object and override the *when_pressed_function* method instead.
    
 FormControlCheckbox
    A common use of Checkbox is to offer the user the option to enter additional data.  For example "Enter Expiry Date".  In such a case, the Form needs to display additional fields in some cases, but not in others.  FormControlCheckbox makes this trivial.
