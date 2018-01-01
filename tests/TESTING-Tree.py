@@ -15,7 +15,7 @@ class TestApp(npyscreen.NPSApp):
         g3 = c1.newChild(content='Grand-child 3')
         gg1 = g1.newChild(content='Great Grand-child 1', selectable=True)
         gg2 = g1.newChild(content='Great Grand-child 2', selectable=True)
-        gg3 = g1.newChild(content='Great Grand-child 3')
+        gg3 = g1.newChild(content='Great Grand-child 3', selectable=False)
         wgtree.values = treedata
         
         F.edit()
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     App = TestApp()
     App.run()   
     for v in RETURN:
-        print v
+        print(v)
