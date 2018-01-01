@@ -9,9 +9,9 @@ class TestApp(npyscreen.NPSApp):
         F = EditorFormExample()
         F.wStatus1.value = "Status Line "
         F.wStatus2.value = "Second Status Line "
-        with open("/Users/nicholas/Downloads/pg2600.txt", 'r') as war_and_peace:
-             text = war_and_peace.read()
-        F.wMain.value = text        
+        with open("./pg2600.txt", 'rb') as war_and_peace:
+             text = war_and_peace.read().decode("UTF-8")
+        F.wMain.value = text
 
 
         F.edit()
