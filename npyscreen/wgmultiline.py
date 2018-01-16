@@ -254,7 +254,7 @@ object to be passed to the contained widget."""
 
         self._last_start_display_at = self.start_display_at
         self._last_cursor_line = self.cursor_line
-        self._last_values = copy.copy(self.values)
+        self._last_values = copy.copy(list(self.values))
         self._last_value  = copy.copy(self.value)
         
         # This will prevent the program crashing if the user has changed values, and the cursor 
@@ -329,7 +329,7 @@ object to be passed to the contained widget."""
                 pass
         
         self._last_filter = self._filter
-        self._last_values = copy.copy(self.values)
+        self._last_values = copy.copy(list(self.values))
         if self._filter == None or self._filter == '':
             return []
         list_of_indexes = []

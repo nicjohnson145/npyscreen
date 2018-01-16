@@ -21,7 +21,7 @@ class KeyValueLine(npyscreen.AnnotateTextboxBase):
 class KeyValueMultiline(npyscreen.MultiLine):
     _contained_widgets = KeyValueLine
     def when_parent_changes_value(self):
-        self.values = self.parent.value.items()
+        self.values = list(self.parent.value.items())
     
     def display_value(self, vl):
         # pass the real object to subwidgets
