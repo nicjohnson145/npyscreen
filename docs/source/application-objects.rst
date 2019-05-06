@@ -165,4 +165,4 @@ Other Application classes
 
 To use NPSApp subclass it and provide your own `.main()` definition.  When you are ready to run the application call `.run()` and your mainloop will be executed.
 
-While it provides maximum flexibility, NPSApp is in almost every other way inferior to NPSAppManaged.  Do not use it for new projects, and reguard it as an internal base class only.
+While it provides maximum flexibility, NPSApp is in almost every other way inferior to NPSAppManaged.  Do not use it for new projects, and regard it as an internal base class only.
