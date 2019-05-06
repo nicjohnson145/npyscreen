@@ -1,7 +1,7 @@
 Widgets: Displaying Text
 ************************
 
-Textfild, TitleText
+Textfield, TitleText
    A single line of text, although of arbitrary length - the basic entry widget.  N.B. some versions of the documentation incorrection refer to a 'textbox' widget.
 
 FixedText, TitleFixedText
