@@ -90,6 +90,7 @@ Compatibility
 Current development is done on Python 3, but the code is kept compatible with modern releases of Python 2.  Certain features related to unicode work better under Python 3.
 
 It is designed to run using only the python standard library, and the only requirements are a working python (2.6 or above) installation and a working curses library.  Npyscreen will therefore work on almost all common platforms, and even in the Cygwin environment on Windows.
+Another option on Windows is to use curses Python library from http://www.lfd.uci.edu/~gohlke/pythonlibs/#curses directly.
 
 Python 3.4.0
 ------------
