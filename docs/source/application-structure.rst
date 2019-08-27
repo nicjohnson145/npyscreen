@@ -63,7 +63,7 @@ Switiching into and out of a curses environment is a very boring task.  The pyth
     
     if __name__ == '__main__':
         npyscreen.wrapper_basic(myFunction)
-        print "Blink and you missed it!"
+        print( "Blink and you missed it!" )
         
 Which doesn't do anything clever.  The curses environment starts and exits without actually doing anything.  But it's a start.
 
@@ -86,7 +86,7 @@ should do the trick.  Let's put that into our wrapper::
     
     if __name__ == '__main__':
         npyscreen.wrapper_basic(myFunction)
-        print "Blink and you missed it!"
+        print( "Blink and you missed it!" )
 
 Which still seems to do nothing -- because we haven't actually displayed the Form.  *F.display()* would put it on the screen, but we actually want to let the user play with it, so let's do F.edit() instead::
 
@@ -98,7 +98,7 @@ Which still seems to do nothing -- because we haven't actually displayed the For
     
     if __name__ == '__main__':
         npyscreen.wrapper_basic(myFunction)
-        print "Blink and you missed it!"
+        print( "Blink and you missed it!" )
         
 Which won't run, because when we try to edit the Form npyscreen discovers there's no widget to edit.  Let's put that right.
 
@@ -120,7 +120,7 @@ The full code is::
     
     if __name__ == '__main__':
         npyscreen.wrapper_basic(myFunction)
-        print "Blink and you missed it!"
+        print( "Blink and you missed it!" )
         
 Much better! That gives us something looking like an application.  With just a three small changes we can change closing the message displayed to whatever the user typed::
 
@@ -133,7 +133,7 @@ Much better! That gives us something looking like an application.  With just a t
         return myFW.value   # <------- Change 2
     
     if __name__ == '__main__':
-        print npyscreen.wrapper_basic(myFunction)  # <---- and change 3
+        print( npyscreen.wrapper_basic(myFunction) ) # <---- and change 3
 
 Let's be a little more object-oriented
 ++++++++++++++++++++++++++++++++++++++
@@ -166,7 +166,7 @@ We can use our wrapper code from before to use it::
         return "Created record for " + F.myName.value
     
     if __name__ == '__main__':
-        print npyscreen.wrapper_basic(myFunction)
+        print( npyscreen.wrapper_basic(myFunction) )
     
 
 
@@ -198,7 +198,7 @@ Putting that in context::
             return "Created record for " + F.myName.value
 
         if __name__ == '__main__':
-            print npyscreen.wrapper_basic(myFunction)
+            print( npyscreen.wrapper_basic(myFunction) )
             
             
 
@@ -214,9 +214,9 @@ Let's scrap the framework that has supported us so far, and start with a differe
     class MyApplication(npyscreen.NPSAppManaged):
         pass
 
-     if __name__ == '__main__':
+    if __name__ == '__main__':
         TestApp = MyApplication().run()
-        print "All objects, baby."
+        print( "All objects, baby." )
           
 Which will exit with an exception, because you have no 'MAIN' Form, which is the starting point for all NPSAppManaged applications.
 
@@ -230,13 +230,13 @@ Let's put that right.  We'll use the Form class from before::
            self.myDepartment = self.add(npyscreen.TitleSelectOne, scroll_exit=True, max_height=3, name='Department', values = ['Department 1', 'Department 2', 'Department 3'])
            self.myDate        = self.add(npyscreen.TitleDateCombo, name='Date Employed')
 
-   class MyApplication(npyscreen.NPSAppManaged):
-       def onStart(self):
+    class MyApplication(npyscreen.NPSAppManaged):
+        def onStart(self):
            self.addForm('MAIN', myEmployeeForm, name='New Employee')
 
-   if __name__ == '__main__':
-       TestApp = MyApplication().run()
-       print "All objects, baby."
+    if __name__ == '__main__':
+        TestApp = MyApplication().run()
+        print( "All objects, baby." )
     
 If you run the above code, you'll find yourself frustrated, because the application will continually display the form for you to edit, and you'll have to press "^C" (Control C) to exit.
 
@@ -249,9 +249,9 @@ Let's alter the myEmployeeForm to tell it that after being run in an NPSAppManag
             self.parentApp.setNextForm(None)
     
         def create(self):
-           self.myName        = self.add(npyscreen.TitleText, name='Name')
-           self.myDepartment = self.add(npyscreen.TitleSelectOne, scroll_exit=True, max_height=3, name='Department', values = ['Department 1', 'Department 2', 'Department 3'])
-           self.myDate        = self.add(npyscreen.TitleDateCombo, name='Date Employed')
+            self.myName        = self.add(npyscreen.TitleText, name='Name')
+            self.myDepartment  = self.add(npyscreen.TitleSelectOne, scroll_exit=True, max_height=3, name='Department', values = ['Department 1', 'Department 2', 'Department 3'])
+            self.myDate        = self.add(npyscreen.TitleDateCombo, name='Date Employed')
 
     
     
@@ -266,17 +266,17 @@ Our code now looks like this::
             self.parentApp.setNextForm(None)
 
         def create(self):
-           self.myName        = self.add(npyscreen.TitleText, name='Name')
-           self.myDepartment = self.add(npyscreen.TitleSelectOne, scroll_exit=True, max_height=3, name='Department', values = ['Department 1', 'Department 2', 'Department 3'])
-           self.myDate        = self.add(npyscreen.TitleDateCombo, name='Date Employed')
+            self.myName        = self.add(npyscreen.TitleText, name='Name')
+            self.myDepartment = self.add(npyscreen.TitleSelectOne, scroll_exit=True, max_height=3, name='Department', values = ['Department 1', 'Department 2', 'Department 3'])
+            self.myDate        = self.add(npyscreen.TitleDateCombo, name='Date Employed')
 
     class MyApplication(npyscreen.NPSAppManaged):
-       def onStart(self):
-           self.addForm('MAIN', myEmployeeForm, name='New Employee')
-           # A real application might define more forms here.......
+        def onStart(self):
+            self.addForm('MAIN', myEmployeeForm, name='New Employee')
+            # A real application might define more forms here.......
            
     if __name__ == '__main__':
-       TestApp = MyApplication().run()
+        TestApp = MyApplication().run()
   
   
 Choosing an approach
